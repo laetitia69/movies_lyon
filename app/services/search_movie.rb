@@ -1,12 +1,14 @@
+require 'themoviedb'
 require 'dotenv'
+Dotenv.load('.env')
 
 class SearchMovie
-	 def initialize(movie)
-      Tmdb::Api.key(ENV['API_KEY'])
-      @movie = movie
+	 def initialize
+      Tmdb::Api.key(ENV['TMDB_API_KEY'])
     end
 
     def search(movie)
+      @movie = movie
       Tmdb::Search.movie(movie, page: 1).results.each { |movie|
         director = Tmdb::Movie.director(movie.id).each { |director|
           movie[:director] = director.name
@@ -14,7 +16,7 @@ class SearchMovie
       }
     end
 
-    def perform
+    def perform(movie, director)
       search(@movie)
     end
 

@@ -9,11 +9,16 @@
 		</th>
 	</thead>
 	<tbody>
+		<% for item in (0..19) do %>
 		<tr>
+			<td> <%= SearchMovie.new.perform(@title, item) %> 
+</td>
 			<td></td>
-			<td><%= params[:movie] %></td>
-			<td><%= params[:movie] %></td>
-			<td><%= params[:movie] %></td>
-		</tr>
+			<td></td>
+			<td></td>
+		</tr> <% end %>
+
 	</tbody>
 </table>
+ 
+

@@ -24,7 +24,7 @@ Pour tester cette application, importer le dossier sur votre pc, en suivant les 
 ```
 Importez dans votre dossier,
 
-$ git clone https://github.com/loundness/movie_search_lyonx
+$ git clone https://github.com/laetitia69/movies_lyon
 
 $ cd movie_lyonx
 
