@@ -1,30 +1,4 @@
-<<<<<<< HEAD
-# README
-
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-=======
- # [Movie-Lyon x](https://movielyonx.herokuapp.com/)
+ # [Movies-Lyon x](https://movies-lyon.herokuapp.com/)
 
 Ce Readme permet de trouver un film, en fonction de votre recherche,
 vous trouverez dans les détails de votre recherche par film;
@@ -47,7 +21,7 @@ vous trouverez dans les détails de votre recherche par film;
 
 Pour tester cette application, importer le dossier sur votre pc, en suivant les instructions suivantes;
 
-```sh
+```
 Importez dans votre dossier,
 
 $ git clone https://github.com/loundness/movie_search_lyonx
@@ -61,6 +35,5 @@ $ rails db:migrate
 $ rails server
 ```
 
-Pour accéder à la page heroku, [voici le lien]()
+Pour accéder à la page heroku, [voici le lien](https://movies-lyon.herokuapp.com/)
 
->>>>>>> 3d0d3ae53608c4588497d82fa7c66d61bdb96aa2
