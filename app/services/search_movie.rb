@@ -8,12 +8,12 @@ class SearchMovie
     end
 
     def search(movie)
-      @movie = movie
-      Tmdb::Search.movie(movie, page: 1).results.each { |movie|
-        director = Tmdb::Movie.director(movie.id).each { |director|
-          movie[:director] = director.name
-        }
-      }
+    #   @movie = movie
+    #   Tmdb::Search.movie(movie, page: 1).results.each { |movie|
+    #     director = Tmdb::Movie.director(movie.id).each { |director|
+    #       movie[:director] = director.name
+    #     }
+    #   }
     end
 
     def perform(movie, director)
