@@ -11,10 +11,10 @@
 	<tbody>
 		<% @results.each do |result| %>
 		<tr>
-			<td> <%= result.title %> </td>
-			<td><%= result.release_date %></td>
-			<td><%= result.director %></td>
-			<td><%= image_tag result.img %></td>
+			<td> <%= result['title'] %> </td>
+			<td><%= result['crew'] %></td>
+			<td><%= result['release_date'] %></td>
+			<td><%= puts 'img' %></td>
 		</tr> 
 		<% end %>
 
