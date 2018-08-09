@@ -1,22 +1,22 @@
 
-<table class="container">
-	<thead>
-		<th>
-			<td>Films</td>
-			<td>Réalisé par</td>
-			<td>Date de sortie</td>
-			<td>image</td>
-		</th>
+<table class="table table-striped">
+	<thead class="thead-dark">
+		<tr>
+			<th scope="col">Films</th>
+			<th scope="col">Réalisé par</th>
+			<th scope="col">Date de sortie</th>
+			<th scope="col">image</th>
+		</tr>
 	</thead>
 	<tbody>
-		<% for item in (0..19) do %>
+		<% @results.each do |result| %>
 		<tr>
-			<td> <%= SearchMovie.new.perform(@title, item) %> 
-</td>
-			<td></td>
-			<td></td>
-			<td></td>
-		</tr> <% end %>
+			<td> <%= result.title %> </td>
+			<td><%= result.release_date %></td>
+			<td><%= result.director %></td>
+			<td><%= image_tag result.img %></td>
+		</tr> 
+		<% end %>
 
 	</tbody>
 </table>
