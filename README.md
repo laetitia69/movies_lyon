@@ -1,4 +1,4 @@
- # [Movies-Lyon x](https://movies-lyon.herokuapp.com/)
+ # [Movies-Lyon](https://movies-lyon.herokuapp.com/)
 
 Ce Readme permet de trouver un film, en fonction de votre recherche,
 vous trouverez dans les détails de votre recherche par film;

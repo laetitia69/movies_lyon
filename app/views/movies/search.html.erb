@@ -15,7 +15,7 @@
 		<% @search.fetch.each do |result| %>
 		<tr>
 			<td> <%= result['title'] %> </td>
-			<td><%= result['trailers'] %></td>
+			<td><%= Tmdb::Movie.credits(result['id'])['crew'].select { |x| x['job'] == 'Director' }[0]['name'] %></td>
 			<td><%= result['release_date'] %></td>
 			<td><% if result['poster_path'] %>
             <img class="affiche" src="http://image.tmdb.org/t/p/w185/<%= result['poster_path'] %>" >
