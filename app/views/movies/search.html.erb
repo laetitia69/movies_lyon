@@ -1,4 +1,4 @@
-<%  if !@search.blank? %>
+<%  if @search.fetch.blank? && @title !=nil %>
   <h3>Tu nous sors le seul film au monde qui n'existe pas!!!</h3>
 <% else @search %>
 <table class="table table-striped">
