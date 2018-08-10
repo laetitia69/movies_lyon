@@ -1,4 +1,6 @@
-
+<%  if !@search.blank? %>
+  <h3>Tu nous sors le seul film au monde qui n'existe pas!!!</h3>
+<% else @search %>
 <table class="table table-striped">
 	<thead class="thead-dark">
 		<tr>
@@ -13,13 +15,18 @@
 		<% @search.fetch.each do |result| %>
 		<tr>
 			<td> <%= result['title'] %> </td>
-			<td><%= result['crew'] %></td>
+			<td><%= result['trailers'] %></td>
 			<td><%= result['release_date'] %></td>
-			<td><%= 'img' %></td>
+			<td><% if result['poster_path'] %>
+            <img class="affiche" src="http://image.tmdb.org/t/p/w185/<%= result['poster_path'] %>" >
+          		<% else %>
+          			<%= "Pas d'affiche répertoriée" %>
+				<% end %>
+			</td>
 		</tr> 
 		<% end %>
-<% end %>
+		<% end %>
 	</tbody>
 </table>
- 
+<% end %>
 
