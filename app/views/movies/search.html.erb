@@ -9,15 +9,16 @@
 		</tr>
 	</thead>
 	<tbody>
-		<% @results.each do |result| %>
+		<% if @search.fetch != nil %>
+		<% @search.fetch.each do |result| %>
 		<tr>
 			<td> <%= result['title'] %> </td>
 			<td><%= result['crew'] %></td>
 			<td><%= result['release_date'] %></td>
-			<td><%= puts 'img' %></td>
+			<td><%= 'img' %></td>
 		</tr> 
 		<% end %>
-
+<% end %>
 	</tbody>
 </table>
  

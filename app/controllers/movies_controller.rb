@@ -4,10 +4,9 @@ class MoviesController < ApplicationController
 
     @search = Tmdb::Search.new
     @search.resource('movie') # determines type of resource
-    @search.query('@title') # the query to search against
-    @results = @search.fetch
-    return @search.fetch # makes request
-
+    @search.query(@title) # the query to search against
+    @search.fetch
+    puts @search.fetch
   end
 
  
